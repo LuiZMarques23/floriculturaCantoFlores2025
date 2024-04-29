@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1055178003117",
+    "project_id": "floricultura-canto-flores",
+    "storage_bucket": "floricultura-canto-flores.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055178003117:android:ea213f69b760553bc3ac24",
+        "android_client_info": {
+          "package_name": "com.marcos.floriculturacantodaflores"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUETErYjZyIf0Sbs9yAvY1CCkNorFbya8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
