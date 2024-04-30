@@ -66,12 +66,14 @@ class DB {
         preco: String,
         tamanho_calcado: String,
         status_pagamento: String,
-        status_entrega: String
+        status_entrega: String,
+        pedidoID: String,
+        usuarioID: String
     ){
 
         var db = FirebaseFirestore.getInstance()
-        var usuarioID = FirebaseAuth.getInstance().currentUser!!.uid
-        var pedidoID = UUID.randomUUID().toString()
+//        var usuarioID = FirebaseAuth.getInstance().currentUser!!.uid
+//        var pedidoID = UUID.randomUUID().toString()
 
         val pedidos = hashMapOf(
             "endereco" to endereco,
@@ -80,11 +82,46 @@ class DB {
             "preco" to preco,
             "tamanho_calcado" to tamanho_calcado,
             "status_pagamento" to status_pagamento,
-            "status_entrega" to status_entrega
+            "status_entrega" to status_entrega,
+            "usuarioID" to usuarioID,
+            "pedidoID" to pedidoID
         )
 
         val documentReference = db.collection("Usuario_Pedidos").document(usuarioID)
             .collection("Pedidos").document(pedidoID)
+        documentReference.set(pedidos).addOnSuccessListener {
+            Log.d("db_pedido","Sucesso ao salvar os pedidos!")
+        }
+    }
+
+    fun salvarDadosPedidosAdmin(
+        endereco: String,
+        celular: String,
+        produto: String,
+        preco: String,
+        tamanho_calcado: String,
+        status_pagamento: String,
+        status_entrega: String,
+        pedidoID: String,
+        usuarioID: String
+    ){
+
+        var db = FirebaseFirestore.getInstance()
+
+
+        val pedidos = hashMapOf(
+            "endereco" to endereco,
+            "celular" to celular,
+            "produto" to produto,
+            "preco" to preco,
+            "tamanho_calcado" to tamanho_calcado,
+            "status_pagamento" to status_pagamento,
+            "status_entrega" to status_entrega,
+            "pedidoID" to pedidoID,
+            "usuarioID" to usuarioID
+        )
+
+        val documentReference = db.collection("Pedidos_Admin").document(pedidoID)
         documentReference.set(pedidos).addOnSuccessListener {
             Log.d("db_pedido","Sucesso ao salvar os pedidos!")
         }

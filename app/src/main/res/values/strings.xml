@@ -15,7 +15,7 @@
     <string name="texto_botao_fazer_pagamento">Fazer Pagamento</string>
     <string name="titulo_tela_cadastro">Faça seu Cadastro</string>
     <string name="texto_dialog_carregando">Carregando...</string>
-    <string name="titulo_escolha_tamanho_calcado">Escolha o tamanho</string>
+    <string name="titulo_escolha_tamanho_calcado">Escolha um código</string>
     <string name="titulo_preco">Preço</string>
     <string name="titulo_tela_pagamento">Preencha todos os campos antes de fazer o pagamento</string>
 
@@ -25,11 +25,11 @@
     <string name="menu_item_deslogar">Sair da Sessão</string>
     <string name="texto_botao_deslogar">Sair</string>
 
-    <string name="texto_tamanho_38">38</string>
-    <string name="texto_tamanho_39">39</string>
-    <string name="texto_tamanho_40">40</string>
-    <string name="texto_tamanho_41">41</string>
-    <string name="texto_tamanho_42">42</string>
+    <string name="texto_tamanho_38">01</string>
+    <string name="texto_tamanho_39">02</string>
+    <string name="texto_tamanho_40">03</string>
+    <string name="texto_tamanho_41">04</string>
+    <string name="texto_tamanho_42">05</string>
     <string name="recuperar_senha">Recuperar senha</string>
     <string name="informe_seu_e_mail_que_enviaremos_num_link_para_altera_o_da_senha">Informe seu e-mail que enviaremos \num link para alteração da senha.</string>
     <string name="txt_recuperar_senha">Recuperar</string>

@@ -20,6 +20,9 @@ import com.marcos.floriculturacantodaflores.model.DB;
 import com.mercadopago.android.px.configuration.AdvancedConfiguration;
 import com.mercadopago.android.px.core.MercadoPagoCheckout;
 import com.mercadopago.android.px.model.Payment;
+
+import java.util.UUID;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -34,10 +37,12 @@ public class Pagamento extends AppCompatActivity {
     private String nome;
     private String preco;
 
-    private final String PUBLIC_KEY = "TEST-273ec18a-ea44-46a7-ab8a-9724e49adc6f";
-    private final String ACCESS_TOKEN = "TEST-8292512919792545-101412-514299525db86e8e323fac23bc018a5b-1512003988";
+    private final String PUBLIC_KEY = "APP_USR-fc235ba5-c2b6-4cf6-a943-876a68755f5f";
+    private final String ACCESS_TOKEN = "APP_USR-3179623366446893-070414-4883123c4ef6893e6ff765efa26d2fa7-363385476";
 
     DB db = new DB();
+    private String usuarioID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+    private String pedidoID = UUID.randomUUID().toString();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -180,15 +185,17 @@ public class Pagamento extends AppCompatActivity {
 
         String nomeProduto = "Nome: " + " " + nome;
         String precoProduto = "Preço: " + " " + preco;
-        String tamanho = "Tamanho do Calçado: " + " " + tamanho_calcado;
+        String tamanho = "Seu Código: " + " " + tamanho_calcado;
         String celular_usuario = "Celular: " + " " + celular;
 
         if (status.equalsIgnoreCase("approved")){
             Snackbar snackbar = Snackbar.make(binding.container,"Sucesso ao fazer o pagamento",Snackbar.LENGTH_SHORT);
-            snackbar.setBackgroundTint(Color.BLUE);
+            snackbar.setBackgroundTint(Color.GREEN);
             snackbar.setTextColor(Color.WHITE);
             snackbar.show();
-            db.salvarDadosPedidosUsuario(endereco,celular_usuario,nomeProduto,precoProduto,tamanho,status_pagamento,status_entrega);
+            db.salvarDadosPedidosUsuario(endereco,celular_usuario,nomeProduto,precoProduto,tamanho,status_pagamento,status_entrega,pedidoID,usuarioID);
+            db.salvarDadosPedidosAdmin(endereco,celular_usuario,nomeProduto,precoProduto,tamanho,status_pagamento,status_entrega,pedidoID,usuarioID);
+
         }else if (status.equalsIgnoreCase("rejected")){
             Snackbar snackbar = Snackbar.make(binding.container,"Erro ao fazer o pagamento",Snackbar.LENGTH_SHORT);
             snackbar.setBackgroundTint(Color.RED);

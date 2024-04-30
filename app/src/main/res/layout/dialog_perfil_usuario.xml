@@ -10,7 +10,7 @@
         android:id="@+id/container_circulo"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/circulo_imagem_perfil"
+        android:src="@drawable/ic_perfil"
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"

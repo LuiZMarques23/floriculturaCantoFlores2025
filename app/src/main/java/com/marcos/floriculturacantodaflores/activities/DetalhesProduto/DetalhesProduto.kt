@@ -49,7 +49,7 @@ class DetalhesProduto : AppCompatActivity() {
 
             if (!tamanho_calcado_38.isChecked && !tamanho_calcado_39.isChecked && !tamanho_calcado_40.isChecked
                 && !tamanho_calcado_41.isChecked && !tamanho_calcado_42.isChecked){
-                val snackbar = Snackbar.make(it,"Escolha o tamanho do calçado!",Snackbar.LENGTH_SHORT)
+                val snackbar = Snackbar.make(it,"Escolha um numero!",Snackbar.LENGTH_SHORT)
                 snackbar.setBackgroundTint(Color.RED)
                 snackbar.setTextColor(Color.WHITE)
                 snackbar.show()
