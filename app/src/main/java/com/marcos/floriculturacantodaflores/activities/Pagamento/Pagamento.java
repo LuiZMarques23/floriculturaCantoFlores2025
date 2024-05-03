@@ -33,7 +33,6 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 public class Pagamento extends AppCompatActivity {
 
     ActivityPagamentoBinding binding;
-    private String tamanho_calcado;
     private String nome;
     private String preco;
 
@@ -50,7 +49,6 @@ public class Pagamento extends AppCompatActivity {
         binding = ActivityPagamentoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        tamanho_calcado = getIntent().getExtras().getString("tamanho_calcado");
         nome = getIntent().getExtras().getString("nome");
         preco = getIntent().getExtras().getString("preco");
 
@@ -185,7 +183,6 @@ public class Pagamento extends AppCompatActivity {
 
         String nomeProduto = "Nome: " + " " + nome;
         String precoProduto = "Preço: " + " " + preco;
-        String tamanho = "Seu Código: " + " " + tamanho_calcado;
         String celular_usuario = "Celular: " + " " + celular;
 
         if (status.equalsIgnoreCase("approved")){
@@ -193,8 +190,8 @@ public class Pagamento extends AppCompatActivity {
             snackbar.setBackgroundTint(Color.GREEN);
             snackbar.setTextColor(Color.WHITE);
             snackbar.show();
-            db.salvarDadosPedidosUsuario(endereco,celular_usuario,nomeProduto,precoProduto,tamanho,status_pagamento,status_entrega,pedidoID,usuarioID);
-            db.salvarDadosPedidosAdmin(endereco,celular_usuario,nomeProduto,precoProduto,tamanho,status_pagamento,status_entrega,pedidoID,usuarioID);
+            db.salvarDadosPedidosUsuario(endereco,celular_usuario,nomeProduto,precoProduto,status_pagamento,status_entrega,pedidoID,usuarioID);
+            db.salvarDadosPedidosAdmin(endereco,celular_usuario,nomeProduto,precoProduto,status_pagamento,status_entrega,pedidoID,usuarioID);
 
         }else if (status.equalsIgnoreCase("rejected")){
             Snackbar snackbar = Snackbar.make(binding.container,"Erro ao fazer o pagamento",Snackbar.LENGTH_SHORT);

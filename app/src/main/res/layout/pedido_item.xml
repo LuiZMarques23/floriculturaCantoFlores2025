@@ -46,7 +46,7 @@
         android:id="@+id/txt_tamanhoCalcado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="42"
+        android:text="Status do Pedido"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginStart="20dp"

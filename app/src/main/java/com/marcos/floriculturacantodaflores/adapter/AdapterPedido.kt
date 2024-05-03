@@ -20,7 +20,6 @@ class AdapterPedido(val context: Context, val lista_pedidos: MutableList<Pedido>
         holder.txtCelular.text = lista_pedidos.get(position).celular
         holder.txtNome.text = lista_pedidos.get(position).produto
         holder.txtPreco.text = lista_pedidos.get(position).preco
-        holder.txtTamanhoCalcado.text = lista_pedidos.get(position).tamanho_calcado
         holder.txtStatusPagamento.text = lista_pedidos.get(position).status_pagamento
         holder.txtStatusEntrega.text = lista_pedidos.get(position).status_entrega
     }
@@ -33,7 +32,6 @@ class AdapterPedido(val context: Context, val lista_pedidos: MutableList<Pedido>
         val txtCelular = binding.txtCelular
         val txtNome = binding.txtNomeProduto
         val txtPreco = binding.txtPrecoProduto
-        val txtTamanhoCalcado = binding.txtTamanhoCalcado
         val txtStatusPagamento = binding.txtStatusPagamento
         val txtStatusEntrega = binding.txtStatusEntrega
 

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import com.bumptech.glide.Glide
 import com.google.android.material.snackbar.Snackbar
 import com.marcos.floriculturacantodaflores.activities.Pagamento.Pagamento
@@ -13,7 +14,7 @@ import com.marcos.floriculturacantodaflores.databinding.ActivityDetalhesProdutoB
 class DetalhesProduto : AppCompatActivity() {
 
     lateinit var binding: ActivityDetalhesProdutoBinding
-    var tamanho_calcado = ""
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,36 +31,23 @@ class DetalhesProduto : AppCompatActivity() {
 
         binding.btFinalizarPedido.setOnClickListener {
 
-            val tamanho_calcado_38 = binding.tamanho38
-            val tamanho_calcado_39 = binding.tamanho39
-            val tamanho_calcado_40 = binding.tamanho40
-            val tamanho_calcado_41 = binding.tamanho41
-            val tamanho_calcado_42 = binding.tamanho42
+            val alertDialog = AlertDialog.Builder(this)
+            alertDialog.setTitle("Aviso")
+            alertDialog.setMessage("Todas compras feita online terão retirar produto na loja, Não tem entrega domiciliar!")
+            alertDialog.setPositiveButton("Tudo bem",{ _, _ ->
 
-            when(true){
-                tamanho_calcado_38.isChecked -> tamanho_calcado = "38"
-                tamanho_calcado_39.isChecked -> tamanho_calcado = "39"
-                tamanho_calcado_40.isChecked -> tamanho_calcado = "40"
-                tamanho_calcado_41.isChecked -> tamanho_calcado = "41"
-                tamanho_calcado_42.isChecked -> tamanho_calcado = "42"
-                else -> {
-
-                }
-            }
-
-            if (!tamanho_calcado_38.isChecked && !tamanho_calcado_39.isChecked && !tamanho_calcado_40.isChecked
-                && !tamanho_calcado_41.isChecked && !tamanho_calcado_42.isChecked){
-                val snackbar = Snackbar.make(it,"Escolha um numero!",Snackbar.LENGTH_SHORT)
-                snackbar.setBackgroundTint(Color.RED)
-                snackbar.setTextColor(Color.WHITE)
-                snackbar.show()
-            }else{
                 val intent = Intent(this,Pagamento::class.java)
-                intent.putExtra("tamanho_calcado",tamanho_calcado)
                 intent.putExtra("nome",nome)
                 intent.putExtra("preco",preco)
                 startActivity(intent)
-            }
+
+            })
+            alertDialog.setNegativeButton("Não",{ _, _ ->
+
+            })
+            alertDialog.show()
+
+
         }
     }
 }
