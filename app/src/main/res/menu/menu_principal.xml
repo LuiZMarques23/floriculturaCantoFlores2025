@@ -22,6 +22,18 @@
               app:showAsAction="never"/>
 
           <item
+              android:id="@+id/ajuda"
+              android:title="@string/menu_ajuda"
+              android:icon="@drawable/ic_ajuda"
+              app:showAsAction="never"/>
+
+          <item
+              android:id="@+id/sobreApp"
+              android:title="@string/menu_sobre_o_aplicativo"
+              android:icon="@drawable/ic_sobre_app"
+              app:showAsAction="never"/>
+
+          <item
               android:id="@+id/deslogar"
               android:title="@string/menu_item_deslogar"
               android:icon="@drawable/ic_deslogar"

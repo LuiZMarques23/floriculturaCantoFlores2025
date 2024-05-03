@@ -9,4 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="dark_blue">#3F51B5</color>
     <color name="light_gray">#F4F4F4</color>
+
+
+
+    <color name="ui_components_android_color_primary">@color/dark_blue</color>
+    <color name="ui_components_android_color_primary_dark">@color/dark_blue</color>
 </resources>

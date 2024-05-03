@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
 
 
 import com.google.android.material.snackbar.Snackbar;
@@ -48,6 +49,8 @@ public class Pagamento extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityPagamentoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        corStatusBar();
 
         nome = getIntent().getExtras().getString("nome");
         preco = getIntent().getExtras().getString("preco");
@@ -199,5 +202,9 @@ public class Pagamento extends AppCompatActivity {
             snackbar.setTextColor(Color.WHITE);
             snackbar.show();
         }
+    }
+    private void corStatusBar() {
+       Window window = getWindow();
+       window.setStatusBarColor(Color.parseColor("#3F51B5"));
     }
 }

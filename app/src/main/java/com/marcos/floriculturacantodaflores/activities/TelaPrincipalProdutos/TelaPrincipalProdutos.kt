@@ -1,6 +1,8 @@
 package com.marcos.floriculturacantodaflores.activities.TelaPrincipalProdutos
 
 import android.content.Intent
+import android.graphics.Color
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -9,10 +11,12 @@ import androidx.recyclerview.widget.GridLayoutManager
 
 import com.google.firebase.auth.FirebaseAuth
 import com.marcos.floriculturacantodaflores.R
+import com.marcos.floriculturacantodaflores.activities.Contato.Contato
 
 import com.marcos.floriculturacantodaflores.activities.FormLogin.FormLogin
 import com.marcos.floriculturacantodaflores.activities.Pedidos.Pedidos
 import com.marcos.floriculturacantodaflores.adapter.AdapterProduto
+import com.marcos.floriculturacantodaflores.databinding.ActivityContatoBinding
 import com.marcos.floriculturacantodaflores.databinding.ActivityTelaPrincipalProdutosBinding
 import com.marcos.floriculturacantodaflores.dialog.DialogPerfilUsuario
 import com.marcos.floriculturacantodaflores.model.DB
@@ -37,6 +41,7 @@ class TelaPrincipalProdutos : AppCompatActivity() {
 
         val db = DB()
         db.obterListaDeProdutos(lista_produtos,adapterProduto)
+        corStatusBar()
     }
 
 
@@ -51,9 +56,16 @@ class TelaPrincipalProdutos : AppCompatActivity() {
             R.id.perfil -> iniciarDialogPerfilUsuario()
             R.id.pedidos -> iniciarTelaDePedidos()
             R.id.deslogar -> deslogarUsuario()
+            R.id.ajuda -> iniciarContatoUsuario()
+
         }
 
         return super.onOptionsItemSelected(item)
+    }
+    private fun iniciarContatoUsuario(){
+        val intent = Intent(this, Contato::class.java)
+        startActivity(intent)
+
     }
 
     private fun iniciarDialogPerfilUsuario(){
@@ -73,4 +85,10 @@ class TelaPrincipalProdutos : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
+    private fun corStatusBar() {
+        window.statusBarColor = Color.parseColor("#3F51B5")
+    }
+
+
 }

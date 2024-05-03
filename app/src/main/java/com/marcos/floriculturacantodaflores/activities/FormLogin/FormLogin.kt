@@ -25,6 +25,7 @@ class FormLogin : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar!!.hide()
+        corStatusBar()
         val dialogCarregando = DialogCarregando(this)
 
         binding.btEntrar.setOnClickListener {view ->
@@ -87,5 +88,9 @@ class FormLogin : AppCompatActivity() {
         if (usuarioAtual != null){
             irParaTelaDeProdutos()
         }
+    }
+
+    private fun corStatusBar() {
+        window.statusBarColor = Color.parseColor("#FFFFFFFF")
     }
 }

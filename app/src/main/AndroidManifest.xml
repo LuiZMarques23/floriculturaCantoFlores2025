@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LojaVirtual">
         <activity
+            android:name=".activities.Contato.Contato"
+            android:exported="false" />
+        <activity
+            android:name=".dialog.DialogContatoActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.RecuperarSenha.RecuperarSenha"
             android:exported="false" />
         <activity

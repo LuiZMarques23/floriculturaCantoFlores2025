@@ -20,6 +20,7 @@ class DetalhesProduto : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetalhesProdutoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar!!.hide()
 
         val foto = intent.extras?.getString("foto")
         val nome = intent.extras?.getString("nome")
@@ -33,7 +34,7 @@ class DetalhesProduto : AppCompatActivity() {
 
             val alertDialog = AlertDialog.Builder(this)
             alertDialog.setTitle("Aviso")
-            alertDialog.setMessage("Todas compras feita online terão retirar produto na loja, Não tem entrega domiciliar!")
+            alertDialog.setMessage("Todas compras feita pelo app tem retirar produto na loja, apos finalizar pagamento acompanhar status entrega comparecer a loja com comprovate pagamento!")
             alertDialog.setPositiveButton("Tudo bem",{ _, _ ->
 
                 val intent = Intent(this,Pagamento::class.java)
@@ -49,5 +50,10 @@ class DetalhesProduto : AppCompatActivity() {
 
 
         }
+
+       corStatusBar()
+    }
+    private fun corStatusBar() {
+        window.statusBarColor = Color.parseColor("#3F51B5")
     }
 }

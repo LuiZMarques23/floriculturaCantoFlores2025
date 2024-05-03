@@ -1,5 +1,6 @@
 package com.marcos.floriculturacantodaflores.activities.Pedidos
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,5 +28,10 @@ class Pedidos : AppCompatActivity() {
 
         val db = DB()
         db.obterListaDePedidos(lista_pedidos,adapterPedidos)
+        corStatusBar()
+    }
+
+    private fun corStatusBar() {
+        window.statusBarColor = Color.parseColor("#3F51B5")
     }
 }

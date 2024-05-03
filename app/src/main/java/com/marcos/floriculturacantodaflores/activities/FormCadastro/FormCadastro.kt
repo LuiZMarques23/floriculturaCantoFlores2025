@@ -1,13 +1,16 @@
 package com.marcos.floriculturacantodaflores.activities.FormCadastro
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.FirebaseNetworkException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
+import com.marcos.floriculturacantodaflores.activities.Pagamento.Pagamento
 import com.marcos.floriculturacantodaflores.databinding.ActivityFormCadastroBinding
 
 import com.marcos.floriculturacantodaflores.model.DB
@@ -23,8 +26,16 @@ class FormCadastro : AppCompatActivity() {
 
         supportActionBar!!.hide()
         val db = DB()
+        corStatusBar()
 
         binding.btCadastrar.setOnClickListener {
+
+
+            val alertDialog = AlertDialog.Builder(this)
+            alertDialog.setTitle("Aviso")
+            alertDialog.setMessage("!")
+            alertDialog.setPositiveButton("Tudo bem",{ _, _ ->
+
 
             val nome = binding.editNome.text.toString()
             val email = binding.editEmail.text.toString()
@@ -58,7 +69,20 @@ class FormCadastro : AppCompatActivity() {
                    snackbar.show()
                }
             }
+
+
+            })
+            alertDialog.setNegativeButton("Não",{ _, _ ->
+
+            })
+            alertDialog.show()
+
         }
 
+
+    }
+
+    private fun corStatusBar() {
+        window.statusBarColor = Color.parseColor("#FFFFFFFF")
     }
 }

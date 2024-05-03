@@ -37,5 +37,9 @@
     <string name="j_recuperou_senha">Já recuperou senha ?</string>
     <string name="txt_n_o_tem_conta_ainda">Não tem conta ainda ?</string>
     <string name="cadastre_se">Cadastre-se</string>
+    <string name="menu_ajuda">Ajuda</string>
+    <string name="menu_sobre_o_aplicativo">Sobre o aplicativo</string>
+    <string name="txt_celular">(31) 99609-8536</string>
+    <string name="txt_email">floriculturacantodasrosas@gmail.com</string>
 
 </resources>
