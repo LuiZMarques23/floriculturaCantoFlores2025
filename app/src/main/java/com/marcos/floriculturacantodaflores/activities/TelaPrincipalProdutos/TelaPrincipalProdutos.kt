@@ -15,6 +15,7 @@ import com.marcos.floriculturacantodaflores.activities.Contato.Contato
 
 import com.marcos.floriculturacantodaflores.activities.FormLogin.FormLogin
 import com.marcos.floriculturacantodaflores.activities.Pedidos.Pedidos
+import com.marcos.floriculturacantodaflores.activities.SobreApp.SobreApp
 import com.marcos.floriculturacantodaflores.adapter.AdapterProduto
 import com.marcos.floriculturacantodaflores.databinding.ActivityContatoBinding
 import com.marcos.floriculturacantodaflores.databinding.ActivityTelaPrincipalProdutosBinding
@@ -57,6 +58,7 @@ class TelaPrincipalProdutos : AppCompatActivity() {
             R.id.pedidos -> iniciarTelaDePedidos()
             R.id.deslogar -> deslogarUsuario()
             R.id.ajuda -> iniciarContatoUsuario()
+            R.id.sobreApp -> iniciarSobreApp()
 
         }
 
@@ -84,6 +86,12 @@ class TelaPrincipalProdutos : AppCompatActivity() {
         val intent = Intent(this,FormLogin::class.java)
         startActivity(intent)
         finish()
+    }
+
+    private fun iniciarSobreApp(){
+        val intent = Intent(this, SobreApp::class.java)
+        startActivity(intent)
+
     }
 
     private fun corStatusBar() {
