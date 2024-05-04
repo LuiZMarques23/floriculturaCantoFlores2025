@@ -58,6 +58,11 @@ class SobreApp : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.btnTermosUso.setOnClickListener {
+            val intent = Intent(this, TermosUso::class.java)
+            startActivity(intent)
+        }
+
     }
 
 

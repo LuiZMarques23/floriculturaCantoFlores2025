@@ -11,6 +11,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import com.marcos.floriculturacantodaflores.activities.Pagamento.Pagamento
+import com.marcos.floriculturacantodaflores.activities.SobreApp.PolicicaPrivacidade
+import com.marcos.floriculturacantodaflores.activities.SobreApp.SobreApp
+import com.marcos.floriculturacantodaflores.activities.SobreApp.TermosUso
 import com.marcos.floriculturacantodaflores.databinding.ActivityFormCadastroBinding
 
 import com.marcos.floriculturacantodaflores.model.DB
@@ -32,9 +35,9 @@ class FormCadastro : AppCompatActivity() {
 
 
             val alertDialog = AlertDialog.Builder(this)
-            alertDialog.setTitle("Aviso")
-            alertDialog.setMessage("!")
-            alertDialog.setPositiveButton("Tudo bem",{ _, _ ->
+            alertDialog.setTitle("Termos uso")
+            alertDialog.setMessage("Bem-vindo aos nossos Termos de uso!")
+            alertDialog.setPositiveButton("Aceito termos",{ _, _ ->
 
 
             val nome = binding.editNome.text.toString()
@@ -72,7 +75,9 @@ class FormCadastro : AppCompatActivity() {
 
 
             })
-            alertDialog.setNegativeButton("Não",{ _, _ ->
+            alertDialog.setNegativeButton("Ler termos",{ _, _ ->
+                val intent = Intent(this, TermosUso::class.java)
+                startActivity(intent)
 
             })
             alertDialog.show()

@@ -5,13 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.SobreApp.PolicicaPrivacidade">
+    tools:context=".activities.SobreApp.TermosUso">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarContato"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="Politica de Privacidade"
+        app:title="Termo Uso"
         app:titleTextColor="@color/white"
         app:navigationIcon="@drawable/ic_voltar"
         android:background="@color/dark_blue"

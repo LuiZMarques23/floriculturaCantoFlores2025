@@ -20,43 +20,104 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <ImageView
-        android:id="@+id/icCelular"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_contato"
-        android:layout_margin="20dp"
-        app:layout_constraintTop_toBottomOf="@id/toolbarContato"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/btnPolicicaPrivacidade"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/txt_celular"
-        android:textSize="15sp"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintTop_toBottomOf="@id/toolbarContato"
-        app:layout_constraintStart_toEndOf="@id/icCelular"/>
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarContato">
 
-    <ImageView
-        android:id="@+id/icEmail"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_email_usuario"
-        android:layout_margin="20dp"
-        app:layout_constraintTop_toBottomOf="@id/icCelular"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_contato"
+            android:layout_marginStart="24dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="32dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_celular"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/claro_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPolicicaPrivacidade" />
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/claro_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPolicicaPrivacidade" />
+
+    <LinearLayout
+        android:id="@+id/btnVersao"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/txt_email"
-        android:textSize="15sp"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintTop_toBottomOf="@id/icCelular"
-        app:layout_constraintStart_toEndOf="@id/icEmail"/>
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnPolicicaPrivacidade">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_email_usuario"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="24dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="32dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_email"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/claro_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVersao" />
 
     <ImageView
         android:id="@+id/btWhatsApp"
@@ -66,5 +127,7 @@
         android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

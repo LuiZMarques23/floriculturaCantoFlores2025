@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LojaVirtual">
         <activity
+            android:name=".activities.SobreApp.TermosUso"
+            android:exported="false" />
+        <activity
             android:name=".activities.SobreApp.PolicicaPrivacidade"
             android:exported="false" />
         <activity

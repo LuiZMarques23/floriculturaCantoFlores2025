@@ -41,6 +41,27 @@
     <string name="menu_sobre_o_aplicativo">Sobre o aplicativo</string>
     <string name="txt_celular">(31) 99609-8536</string>
     <string name="txt_email">floriculturacantodasrosas@gmail.com</string>
+    <string name="txt_descricao">
+        Leonardo Campos é um desenvolvedor Android sênior com uma paixão inigualável pela criação de experiências
+        digitais inovadoras. Com mais de uma década de experiência no desenvolvimento de aplicativos móveis,
+        ela traz consigo um profundo entendimento do ecossistema Android e uma dedicação incansável à excelência técnica.
+        \n\n\n
+        <b>Habilidades</b>
+        \n\n
+        <b><font color='#FF0000'>Desenvolvimento Android:</font></b> Especialista em Kotlin, Leonardo possui uma profunda compreensão do desenvolvimento Android
+        nativo, entregando aplicativos robustos e eficientes.
+        \n\n
+        <b><font color='#FF0000'>Arquitetura de Software:</font></b> Experiente na implementação de arquiteturas modernas como MVVM, Clean Architecture e
+        Jetpack Compose, garantindo código modular e de fácil manutenção.
+        \n\n
+        <b><font color='#FF0000'>Testes Automatizados:</font></b> Firme defensor da qualidade do software, Leonardo implementa testes automatizados de unidade
+        e UI para garantir a estabilidade e a confiabilidade de cada aplicativo.
+        \n\n
+        <b><font color='#FF0000'>Mentoria e Liderança Técnica:</font></b> Além de suas habilidades técnicas, Leonardo destaca-se como mentor, compartilhando
+        conhecimento e orientando equipes para alcançarem seu melhor desempenho.
+        \n\n
+    </string>
     <string name="txt_politica_de_privacidade">Politica de Privacidade</string>
+    <string name="txt_termo_de_uso">Termos de uso</string>
 
 </resources>
