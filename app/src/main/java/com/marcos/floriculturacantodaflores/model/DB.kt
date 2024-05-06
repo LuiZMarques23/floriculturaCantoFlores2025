@@ -7,7 +7,6 @@ import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.marcos.floriculturacantodaflores.adapter.AdapterPedido
 import com.marcos.floriculturacantodaflores.adapter.AdapterProduto
-import java.util.*
 
 class DB {
 

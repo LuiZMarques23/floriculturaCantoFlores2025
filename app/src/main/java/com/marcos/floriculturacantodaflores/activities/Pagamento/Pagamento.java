@@ -16,8 +16,10 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 import com.marcos.floriculturacantodaflores.databinding.ActivityPagamentoBinding;
+import com.marcos.floriculturacantodaflores.databinding.ActivityPedidosBinding;
 import com.marcos.floriculturacantodaflores.interfaceMercadoPago.ComunicacaoServidorMP;
 import com.marcos.floriculturacantodaflores.model.DB;
+import com.marcos.floriculturacantodaflores.model.Pedido;
 import com.mercadopago.android.px.configuration.AdvancedConfiguration;
 import com.mercadopago.android.px.core.MercadoPagoCheckout;
 import com.mercadopago.android.px.model.Payment;
@@ -51,9 +53,11 @@ public class Pagamento extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         corStatusBar();
+        configCliks();
 
         nome = getIntent().getExtras().getString("nome");
         preco = getIntent().getExtras().getString("preco");
+
 
 
         binding.btFazerPagamento.setOnClickListener(v -> {
@@ -72,6 +76,13 @@ public class Pagamento extends AppCompatActivity {
                 criarJsonObject();
             }
         });
+    }
+
+    private void configCliks(){
+        binding.btnVoltaPagamento.setOnClickListener(v ->{
+                    finish();
+
+                });
     }
 
     private void criarJsonObject(){
@@ -175,15 +186,17 @@ public class Pagamento extends AppCompatActivity {
 
         String status = pagamento.getPaymentStatus();
 
+        String nome_completo = binding.editNomeCompleto.getText().toString();
         String bairro = binding.editBairro.getText().toString();
         String rua_numero = binding.editRuaNumero.getText().toString();
         String cidade_estado = binding.editCidadeEstado.getText().toString();
         String celular = binding.editCelular.getText().toString();
 
-        String endereco = "Bairro: " + bairro + " " + " Rua e Número: " + " " + rua_numero + " Cidade e Estado: " + " " + cidade_estado;
+        String endereco =  "Cliente: " + nome_completo + "  " + "Bairro: " + bairro + " " + " Rua e Número: " + " " + rua_numero + " Cidade e Estado: " + " " + cidade_estado;
         String status_pagamento = "Status de Pagamento: " + " " + "Pagamento Aprovado";
         String status_entrega = "Status de Entrega: " + " " + "Em andamento";
 
+//        String nomeCompleto = "Nome Completo" + " " + nome_completo;
         String nomeProduto = "Nome: " + " " + nome;
         String precoProduto = "Preço: " + " " + preco;
         String celular_usuario = "Celular: " + " " + celular;

@@ -63,5 +63,8 @@
     </string>
     <string name="txt_politica_de_privacidade">Politica de Privacidade</string>
     <string name="txt_termo_de_uso">Termos de uso</string>
+    <string name="hint_nome_completo">Nome Completo</string>
+    <string name="txt_finalizou_pagamento">Finalizou Pagamento?</string>
+    <string name="txt_finalizou_pedido">Finalizou Pedido?</string>
 
 </resources>

@@ -22,6 +22,7 @@ class DetalhesProduto : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar!!.hide()
 
+
         val foto = intent.extras?.getString("foto")
         val nome = intent.extras?.getString("nome")
         val preco = intent.extras?.getString("preco")
@@ -52,6 +53,13 @@ class DetalhesProduto : AppCompatActivity() {
         }
 
        corStatusBar()
+        configClicks()
+    }
+
+    private fun configClicks(){
+        binding.btnVoltaPedidos.setOnClickListener {
+            finish()
+        }
     }
     private fun corStatusBar() {
         window.statusBarColor = Color.parseColor("#3F51B5")
