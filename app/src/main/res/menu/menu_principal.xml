@@ -34,6 +34,12 @@
               app:showAsAction="never"/>
 
           <item
+              android:id="@+id/infor"
+              android:title="@string/txt_informa_o"
+              android:icon="@drawable/ic_infor"
+              app:showAsAction="never"/>
+
+          <item
               android:id="@+id/deslogar"
               android:title="@string/menu_item_deslogar"
               android:icon="@drawable/ic_deslogar"

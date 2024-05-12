@@ -97,9 +97,9 @@ public class Pagamento extends AppCompatActivity {
         JsonObject email = new JsonObject();
 
         //Terceiro Item - Excluir formas de pagamento - nesse caso vai ser o boleto
-        /*JsonObject excluir_tipo_pagamento = new JsonObject();
+        JsonObject excluir_tipo_pagamento = new JsonObject();
         JsonArray ids = new JsonArray();
-        JsonObject removerBoleto = new JsonObject();*/
+        JsonObject removerBoleto = new JsonObject();
 
         item = new JsonObject();
         item.addProperty("title",nome);
@@ -114,12 +114,12 @@ public class Pagamento extends AppCompatActivity {
         email.addProperty("email",emailUsuario);
         dados.add("payer",email);
 
-        /*removerBoleto.addProperty("id","ticket");
+        removerBoleto.addProperty("id","ticket");
         ids.add(removerBoleto);
         excluir_tipo_pagamento.add("excluded_payment_types",ids);
         excluir_tipo_pagamento.addProperty("installments",2);
 
-        dados.add("payment_methods",excluir_tipo_pagamento);*/
+        dados.add("payment_methods",excluir_tipo_pagamento);
 
         Log.d("j",dados.toString());
         criarPreferenciaPagamento(dados);

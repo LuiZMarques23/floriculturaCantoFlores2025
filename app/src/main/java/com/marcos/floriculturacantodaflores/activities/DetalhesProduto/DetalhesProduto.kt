@@ -35,7 +35,7 @@ class DetalhesProduto : AppCompatActivity() {
 
             val alertDialog = AlertDialog.Builder(this)
             alertDialog.setTitle("Aviso")
-            alertDialog.setMessage("Todas compras feita pelo app tem retirar produto na loja, apos finalizar pagamento acompanhar status entrega comparecer a loja com comprovate pagamento!")
+            alertDialog.setMessage("Todas compras feita pelo app tem retirar produto na loja, após finalizar pagamento acompanhar status entrega comparecer a loja com comprovate pagamento!")
             alertDialog.setPositiveButton("Tudo bem",{ _, _ ->
 
                 val intent = Intent(this,Pagamento::class.java)

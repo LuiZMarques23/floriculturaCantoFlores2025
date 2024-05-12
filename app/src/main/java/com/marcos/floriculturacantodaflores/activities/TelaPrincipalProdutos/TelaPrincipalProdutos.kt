@@ -2,7 +2,6 @@ package com.marcos.floriculturacantodaflores.activities.TelaPrincipalProdutos
 
 import android.content.Intent
 import android.graphics.Color
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -15,9 +14,9 @@ import com.marcos.floriculturacantodaflores.activities.Contato.Contato
 
 import com.marcos.floriculturacantodaflores.activities.FormLogin.FormLogin
 import com.marcos.floriculturacantodaflores.activities.Pedidos.Pedidos
+import com.marcos.floriculturacantodaflores.activities.SobreApp.Infor
 import com.marcos.floriculturacantodaflores.activities.SobreApp.SobreApp
 import com.marcos.floriculturacantodaflores.adapter.AdapterProduto
-import com.marcos.floriculturacantodaflores.databinding.ActivityContatoBinding
 import com.marcos.floriculturacantodaflores.databinding.ActivityTelaPrincipalProdutosBinding
 import com.marcos.floriculturacantodaflores.dialog.DialogPerfilUsuario
 import com.marcos.floriculturacantodaflores.model.DB
@@ -59,6 +58,7 @@ class TelaPrincipalProdutos : AppCompatActivity() {
             R.id.deslogar -> deslogarUsuario()
             R.id.ajuda -> iniciarContatoUsuario()
             R.id.sobreApp -> iniciarSobreApp()
+            R.id.infor -> iniciarInfo()
 
 
         }
@@ -91,6 +91,12 @@ class TelaPrincipalProdutos : AppCompatActivity() {
 
     private fun iniciarSobreApp(){
         val intent = Intent(this, SobreApp::class.java)
+        startActivity(intent)
+
+    }
+
+    private fun iniciarInfo(){
+        val intent = Intent(this, Infor::class.java)
         startActivity(intent)
 
     }

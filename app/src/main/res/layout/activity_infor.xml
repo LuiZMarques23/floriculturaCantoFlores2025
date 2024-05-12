@@ -5,37 +5,18 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.SobreApp.PolicicaPrivacidade">
+    tools:context=".activities.SobreApp.Infor">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarContato"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="Politica de Privacidade"
+        app:title="Informação"
         app:titleTextColor="@color/white"
         app:navigationIcon="@drawable/ic_voltar"
         android:background="@color/dark_blue"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="20dp"
-        android:background="@drawable/borda_scroll"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarContato">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="@string/txt_politica_priva"
-            android:textSize="14sp" />
-
-    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
